@@ -4,8 +4,14 @@
 </div>
 
 <div class="login-box">
-    <form>
-        <input type="text" placeholder="Username" required>
+    <form method="POST" action="/login">
+        <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+            required>
+
         <button type="submit">Login</button>
     </form>
 </div>
