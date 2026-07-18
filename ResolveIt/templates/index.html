@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complaint Prioritizer</title>
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚀 Complaint Prioritizer</h1>
+
+    <div class="form-box">
+
+        <input
+            id="title"
+            placeholder="Enter Complaint">
+
+        <select id="category">
+
+            <option value="Water">Water</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Roads">Roads</option>
+            <option value="Internet">Internet</option>
+
+        </select>
+
+        <button onclick="submitComplaint()">
+            Submit
+        </button>
+
+    </div>
+
+    <div id="complaints"></div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
