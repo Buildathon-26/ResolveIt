@@ -1,16 +1,79 @@
-css * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Segoe UI;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
 }
 
 body {
-    background: #0f172a;
-    color: white;
+    background: #fdf6e3;
+    /* soft warm beige */
+    color: #3a3a3a;
+    /* readable dark gray */
     padding: 30px;
 }
 
+/* App name + tagline */
+.app-name {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.app-name h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #8b4513;
+    /* warm brown accent */
+    letter-spacing: 2px;
+}
+
+.app-name .tagline {
+    font-size: 16px;
+    color: #7c6f57;
+    /* muted warm gray */
+    margin-top: 8px;
+}
+
+/* Login box styling */
+.login-box {
+    max-width: 350px;
+    margin: auto;
+    background: #fffaf3;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e2d6c2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d9cbb3;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 15px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #d97706;
+    /* warm amber */
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.login-box button:hover {
+    background: #b45309;
+    /* deeper amber */
+}
+
+/* Complaint dashboard */
 .container {
     max-width: 900px;
     margin: auto;
@@ -19,6 +82,9 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 25px;
+    color: #8b4513;
+    /* warm brown accent */
+    font-weight: 600;
 }
 
 .form-box {
@@ -31,46 +97,77 @@ input,
 select {
     flex: 1;
     padding: 12px;
-    border: none;
-    border-radius: 8px;
+    border: 1px solid #d9cbb3;
+    border-radius: 6px;
+    background: #fffaf3;
+    font-size: 15px;
 }
 
+/* Search bar highlight for instant results */
+#search {
+    border: 2px solid #bc6c25;
+    /* terracotta */
+    background: #fff;
+    transition: box-shadow 0.2s ease;
+}
+
+#search:focus {
+    box-shadow: 0 0 8px #bc6c25;
+}
+
+/* Buttons */
 button {
     padding: 10px 16px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 500;
+    background: #d97706;
+    /* warm amber */
+    color: white;
+    transition: background 0.2s ease;
 }
 
+button:hover {
+    background: #b45309;
+    /* deeper amber */
+}
+
+/* Complaint cards */
 .card {
-    background: #1e293b;
-    padding: 20px;
+    background: #fffaf3;
+    padding: 18px;
     margin-bottom: 15px;
-    border-radius: 12px;
+    border-radius: 10px;
+    border: 1px solid #e2d6c2;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .category {
-    color: orange;
+    color: #a0522d;
+    /* sienna */
     margin-top: 5px;
+    font-size: 14px;
 }
 
 .badge {
-    background: red;
-    padding: 4px 8px;
+    background: #e63946;
+    /* warm red */
+    padding: 4px 10px;
     border-radius: 20px;
     font-size: 12px;
-    margin-left: 10px;
+    color: white;
 }
 
 .resolved {
-    background: green;
-    padding: 4px 8px;
+    background: #6a994e;
+    /* olive green */
+    padding: 4px 10px;
     border-radius: 20px;
     font-size: 12px;
+    color: white;
 }
 
 .actions {
@@ -80,22 +177,26 @@ button {
 }
 
 .vote {
-    background: #22c55e;
+    background: #bc6c25;
+    /* terracotta */
     color: white;
 }
 
 .share {
-    background: #3b82f6;
+    background: #468faf;
+    /* muted teal */
     color: white;
 }
 
 .resolve {
-    background: #f97316;
+    background: #f4a261;
+    /* warm peach */
     color: white;
 }
 
 .urgency {
     margin-top: 6px;
     font-size: 14px;
-    color: #cbd5e1;
+    color: #7c6f57;
+    /* muted warm gray */
 }

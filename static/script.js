@@ -13,13 +13,26 @@ async function submitComplaint() {
     formData.append("category", category);
     if (photo) formData.append("photo", photo);
 
-    await fetch("/add_complaint", {
+    // ✅ Send complaint to backend
+    const response = await fetch("/add_complaint", {
         method: "POST",
         body: formData
     });
 
+    const result = await response.json();
+
+    // ✅ If complaint already exists
+    if (result.exists) {
+        alert("Complaint already exists.");
+        document.getElementById("search").value = title; // auto-fill search bar
+        loadComplaints();
+        return;
+    }
+
+    // ✅ Clear form after successful add
     document.getElementById("title").value = "";
     document.getElementById("photo").value = "";
+
     loadComplaints();
 }
 
@@ -82,5 +95,6 @@ async function resolveComplaint(id) {
     loadComplaints();
 }
 
+// Initial load + auto-refresh
 loadComplaints();
-setInterval
+setInterval(loadComplaints, 10000); // refresh every 10s
