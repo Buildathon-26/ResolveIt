@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from datetime import datetime, timedelta
 import json, os
+from difflib import SequenceMatcher
 
 app = Flask(__name__)
 app.secret_key = "supersecret"
@@ -69,6 +70,27 @@ def add_complaint():
     photo = request.files.get("photo")
 
     data = load_data()
+
+
+    # Check for duplicate complaints
+    for item in data:
+        similarity = SequenceMatcher(
+            None,
+            item["title"].lower(),
+            title.lower()
+        ).ratio()
+
+        if similarity >= 0.8 and item["category"].lower() == category.lower():
+            item["votes"] += 1
+            item["vote_times"].append(datetime.now().isoformat())
+            save_data(data)
+
+            return jsonify({
+                "success": True,
+                "duplicate": True,
+                "message": "Complaint already exists. Your vote has been added."
+            })
+
     complaint = {
         "id": len(data) + 1,
         "title": title,
@@ -130,6 +152,26 @@ def analytics():
         "open": open_count,
         "categories": categories
     })
+
+@app.route("/search")
+def search():
+    query = request.args.get("q", "").strip().lower()
+
+    data = load_data()
+
+    results = []
+
+    for item in data:
+        if (
+            query in item["title"].lower()
+            or query in item["category"].lower()
+        ):
+            item["urgency"] = urgency_score(item)
+            results.append(item)
+
+    results.sort(key=lambda x: x["urgency"], reverse=True)
+
+    return jsonify(results)
 
 if __name__ == "__main__":
     app.run(debug=True)

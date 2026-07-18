@@ -1,1 +1,70 @@
-[]
+[
+    {
+        "id": 1,
+        "title": "Water logging",
+        "category": "Water",
+        "author": "Nayonika",
+        "votes": 1,
+        "created_at": "2026-07-18T11:35:04.102387",
+        "vote_times": [
+            "2026-07-18T11:35:11.823489"
+        ],
+        "resolved": true,
+        "photo": "/static/uploads/1_Screenshot (10).png"
+    },
+    {
+        "id": 2,
+        "title": "Water logging",
+        "category": "Water",
+        "author": "Nayonika",
+        "votes": 0,
+        "created_at": "2026-07-18T11:35:54.248674",
+        "vote_times": [],
+        "resolved": false,
+        "photo": null
+    },
+    {
+        "id": 3,
+        "title": "Poor wifi connection",
+        "category": "Electricity",
+        "author": "Nayonika",
+        "votes": 0,
+        "created_at": "2026-07-18T11:40:51.050829",
+        "vote_times": [],
+        "resolved": false,
+        "photo": null
+    },
+    {
+        "id": 4,
+        "title": "Internet issues",
+        "category": "Internet",
+        "author": "Nayonika",
+        "votes": 0,
+        "created_at": "2026-07-18T11:43:20.532302",
+        "vote_times": [],
+        "resolved": false,
+        "photo": null
+    },
+    {
+        "id": 5,
+        "title": "Water logging",
+        "category": "Water",
+        "author": "Nayonika",
+        "votes": 0,
+        "created_at": "2026-07-18T11:44:02.403041",
+        "vote_times": [],
+        "resolved": false,
+        "photo": null
+    },
+    {
+        "id": 6,
+        "title": "Water logging",
+        "category": "Water",
+        "author": "Nayonika",
+        "votes": 0,
+        "created_at": "2026-07-18T11:44:29.640811",
+        "vote_times": [],
+        "resolved": false,
+        "photo": null
+    }
+]
