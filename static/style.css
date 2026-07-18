@@ -1,0 +1,101 @@
+css * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe UI;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input,
+select {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category {
+    color: orange;
+    margin-top: 5px;
+}
+
+.badge {
+    background: red;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.resolved {
+    background: green;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.vote {
+    background: #22c55e;
+    color: white;
+}
+
+.share {
+    background: #3b82f6;
+    color: white;
+}
+
+.resolve {
+    background: #f97316;
+    color: white;
+}
+
+.urgency {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
