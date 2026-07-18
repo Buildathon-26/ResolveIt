@@ -13,7 +13,7 @@ async function submitComplaint() {
     formData.append("category", category);
     if (photo) formData.append("photo", photo);
 
-    await fetch("/add_complaint", {
+    await fetch("/add_complaints", {
         method: "POST",
         body: formData
     });
