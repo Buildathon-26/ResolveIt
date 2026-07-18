@@ -2,31 +2,72 @@
 <html>
 <head>
     <title>Complaint Prioritizer</title>
+
     <link rel="stylesheet" href="/static/style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
-<body>
-<div class="container">
-    <h1>🚀 Complaint Prioritizer</h1>
-    <p>Welcome, {{username}} <a href="/logout">(Logout)</a></p>
 
+<body>
+
+<div class="container">
+
+    <h1>🚀 Complaint Prioritizer</h1>
+
+    <p>
+        Welcome, {{username}}
+        <a href="/logout">(Logout)</a>
+    </p>
+
+    <!-- Complaint Form -->
     <div class="form-box">
-        <input id="title" name="title" placeholder="Enter Complaint">
+
+        <input
+            id="title"
+            name="title"
+            placeholder="Enter Complaint"
+            autocomplete="off">
+
         <select id="category" name="category">
             <option value="Water">💧 Water</option>
             <option value="Electricity">⚡ Electricity</option>
             <option value="Roads">🛣️ Roads</option>
             <option value="Internet">🌐 Internet</option>
         </select>
-        <input type="file" id="photo" name="photo">
-        <button onclick="submitComplaint()">Submit</button>
+
+        <input
+            type="file"
+            id="photo"
+            name="photo">
+
+        <button onclick="submitComplaint()">
+            Submit
+        </button>
+
     </div>
 
-    <input id="search" placeholder="Search complaints..." onkeyup="loadComplaints()">
+    <!-- Live Search -->
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search complaints..."
+        autocomplete="off">
 
     <div id="analytics"></div>
+
     <div id="complaints"></div>
+
 </div>
+
 <script src="/static/script.js"></script>
+
+<script>
+
+document.getElementById("search").addEventListener("input", function () {
+    loadComplaints();
+});
+
+</script>
+
 </body>
 </html>
